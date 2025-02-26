@@ -1,4 +1,4 @@
-# 🏎️ **F1 Argentina Data Analytics Project – Portfolio**
+# 🏎️ **F1 Argentina Data Analytics Project – Portfolio README**
 
 ## 📢 **Project Overview**
 This project focuses on analyzing the **performance of Argentine drivers in Formula 1**, with a special emphasis on **Franco Colapinto’s 2024 debut season**. As an Argentine and a passionate F1 fan, I was motivated by Colapinto’s entry into F1 after more than 15 years without Argentine representation. This project was a perfect opportunity to merge my love for motorsport with data analysis, allowing me to explore a topic that genuinely excites me while showcasing my SQL skills in a real-world scenario.
@@ -27,6 +27,7 @@ For the analysis, I used a **comprehensive Formula 1 dataset** sourced from Kagg
 - **SQL Server Management Studio (SSMS)**: Query development and execution.  
 - **GitHub**: Code hosting and version control.  
 - **Microsoft Excel**: Data cleaning and initial formatting prior to SQL import.  
+- **Tableau Public** *(for final visualizations, see details below)*  
 
 ---
 
@@ -131,6 +132,31 @@ SELECT * FROM ColapintoPerformance ORDER BY Round;
 
 ---
 
+## 🗂️ **How to Navigate This Project**  
+This repository is structured to guide you through the analysis process step by step:
+
+1. **Start with the queries:** Browse the `sql_queries/` folder to view the scripts for each analysis stage. Each file is clearly named and commented for easy understanding.
+2. **Follow the analysis flow:** The queries progress from data exploration to advanced performance comparisons.
+3. **Read the explanations:** Inline comments within the SQL files explain the purpose and logic of each query.
+4. **Explore the final insights:** Visual interpretations of these queries are available in the Tableau dashboard (see below).
+
+🔑 **Tip for recruiters:** Check out the stages focusing on Argentine drivers and Franco Colapinto’s performance to see complex SQL concepts applied to a real-world dataset.
+
+---
+
+## 📊 **Data Visualization with Tableau**  
+To showcase the insights obtained from the SQL analysis, I created an **interactive Tableau dashboard** highlighting:
+- Points progression of Argentine drivers over the decades.
+- Franco Colapinto’s race results and performance comparison.
+- Podium finishes and constructor associations with Argentine drivers.
+- Trends in Argentine driver participation throughout F1 history.
+
+🔗 **Tableau Dashboard Link:** *(Coming soon – will be added here when published)*
+
+*Why use Tableau?* Visualizations make the data-driven stories clearer and more engaging, especially for non-technical stakeholders. This dashboard provides an interactive way to explore key metrics from the project.
+
+---
+
 ## 🌟 **Why This Project Matters**  
 > *"Formula 1 isn’t just a sport to me—it’s a passion. Combining that enthusiasm with my data analysis journey made this project both exciting and educational. Being able to analyze Franco Colapinto’s entry into F1 and Argentina’s racing history was a rewarding challenge that pushed my SQL skills and analytical thinking."*  
 
@@ -145,7 +171,8 @@ SELECT * FROM ColapintoPerformance ORDER BY Round;
 - **GitHub:**  https://github.com/MatiasR95 
 - **LinkedIn:** www.linkedin.com/in/matias-rossi-95-data-strength  
 - **Portfolio Blog:** https://matirossi87mr.wixsite.com/matiasrossi-porfolio
-- **Dataset:** [Kaggle F1 Dataset (1950–2024)] https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020 
+- **Dataset:** [Kaggle F1 Dataset (1950–2024)] https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020  
+- **Tableau Dashboard:** *(Link coming soon)*  
 
 📧 *Let’s connect and discuss data, F1, or this project further!* 🚀
 
