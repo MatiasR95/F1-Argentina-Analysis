@@ -12,7 +12,7 @@ For the analysis, I used a **comprehensive Formula 1 dataset** sourced from Kagg
 - Develop a recruiter-friendly project with clear, documented queries.  
 
 💾 **Dataset:**  
-- Source: [Kaggle F1 Dataset (1950–2024)](https://www.kaggle.com/) *(Add the specific link when available)*  
+- Source: https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020  
 - Contains data on races, drivers, constructors, results, circuits, and standings.  
 
 🚀 **Deliverables:**  
@@ -102,10 +102,10 @@ To showcase the insights obtained from the SQL analysis, I created an **interact
 ---
 
 ## 💬 **Contact & Links**  
-- **GitHub:** [[yourusername](https://github.com/yourusername)](https://github.com/MatiasR95)  
+- **GitHub:** https://github.com/MatiasR95  
 - **LinkedIn:**  www.linkedin.com/in/matias-rossi-95-data-strength 
 - **Portfolio Blog:**  https://matirossi87mr.wixsite.com/matiasrossi-porfolio
-- **Dataset:** [Kaggle F1 Dataset (1950–2024)] (https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020))*  
+- **Dataset:** Kaggle F1 Dataset (1950–2024) https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020 
 - **Tableau Dashboard:** *(Link coming soon)*  
 
 📧 *Let’s connect and discuss data, F1, or this project further!* 🚀
