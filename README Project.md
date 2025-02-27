@@ -43,92 +43,26 @@ For the analysis, I used a **comprehensive Formula 1 dataset** sourced from Kagg
 
 ---
 
-## 📝 **Query Logic & Analysis Approach**  
-The analysis was structured in progressive stages to reflect a professional data exploration process. Each set of queries was designed to answer specific, real-world questions related to F1 and Argentine drivers. 
+## 📊 **Key Findings from the Analysis**  
+### 🏁 **General F1 Insights**  
+- **Total F1 Seasons:** 75 (1950–2024).  
+- **Season with the Most Races:** 2024 (24 races).  
+- **Most Frequent F1 Circuit:** *Autodromo Nazionale Monza* (most races hosted).  
+- **Number of Unique Circuits in F1 History:** *(Insert actual number after query execution)*.  
+- **Most Successful Constructor (by Championships):** Ferrari.  
+- **Season with the Highest Participation of Drivers:** *(Insert season year after query execution)*.  
 
-### 🏁 **1. Data Exploration**  
-*Goal:* Understand the dataset and identify key areas for deeper analysis.  
-✅ Queries included basic counts (e.g., how many circuits have hosted races) and identifying patterns like the number of races per season.  
+### 🇦🇷 **Argentine & Franco Colapinto Insights**  
+- **Number of Argentine Drivers in F1 History:** 25.  
+- **Total Number of Argentine Grand Prix Held:** 20.  
+- **Most Successful Argentine Driver:** Juan Manuel Fangio (5 World Championships).  
+- **Best Constructor with Argentine Drivers:** Ferrari (most points scored with Argentine drivers).  
+- **Total Races Competed by Argentine Drivers:** *(Insert actual number after query execution)*.  
+- **Podium Finishes by Argentine Drivers:** *(Insert actual count after query execution)*.  
+- **Franco Colapinto’s Total Points in 2024:** *(Insert actual number after query execution)*.  
+- **Best Race Finish for Franco Colapinto in 2024:** *(Insert best position after query execution)*.  
 
-```sql
--- How many circuits have been used in F1 history?
-SELECT COUNT(DISTINCT circuitId) AS TotalCircuits FROM circuits;
-```
-*Why?* This provides context on the dataset’s coverage and helps frame further analysis.
-
----
-
-### 📊 **2. Aggregations & Grouping**  
-*Goal:* Summarize key performance metrics.  
-✅ Used aggregation functions to identify trends, like which seasons had the most races and which teams secured the most wins.  
-
-```sql
--- Which season had the most races?
-SELECT TOP 1 r.year AS Season, COUNT(*) AS TotalRaces
-FROM races r
-GROUP BY r.year
-ORDER BY TotalRaces DESC;
-```
-*Why?* Helps understand how the F1 calendar evolved over time.
-
----
-
-### 🔗 **3. Joins & Relationships**  
-*Goal:* Combine multiple tables to derive comprehensive insights.  
-✅ Leveraged joins to connect drivers, results, and constructors, identifying champions and constructor performances.  
-
-```sql
--- List all F1 champions by season
-WITH SeasonsPoints AS (
-    SELECT d.surname AS Driver, ra.year AS Season, SUM(CAST(r.points AS FLOAT)) AS TotalPoints
-    FROM results r
-    JOIN drivers d ON d.driverId = r.driverId
-    JOIN races ra ON ra.raceId = r.raceId
-    GROUP BY d.surname, ra.year
-)
-SELECT Driver, Season, RANK() OVER (PARTITION BY Season ORDER BY TotalPoints DESC) AS Rank
-FROM SeasonsPoints
-WHERE Rank = 1
-ORDER BY Season DESC;
-```
-*Why?* This query identifies the world champion for each season, highlighting how relational data can be combined for meaningful insights.
-
----
-
-### 🇦🇷 **4. Focus on Argentine Drivers**  
-*Goal:* Delve into the performance of Argentine drivers throughout F1 history.  
-✅ Analyzed podium finishes, constructors associated with Argentine drivers, and average points scored.  
-
-```sql
--- Which constructor scored the most points with Argentine drivers?
-SELECT c.name AS Constructor, SUM(CAST(r.points AS FLOAT)) AS TotalPoints
-FROM results r
-JOIN constructors c ON c.constructorId = r.constructorId
-JOIN drivers d ON d.driverId = r.driverId
-WHERE d.nationality LIKE 'Arg%'
-GROUP BY c.name
-ORDER BY TotalPoints DESC;
-```
-*Why?* Understanding which teams Argentine drivers performed best with provides insights into historical team-driver dynamics.
-
----
-
-### 🏎️ **5. Franco Colapinto’s 2024 Season Analysis**  
-*Goal:* Evaluate Colapinto’s debut season and compare it to other Argentine rookies.  
-✅ Focused on race-by-race performance, teammate comparisons, and average points per race.  
-
-```sql
--- Track Colapinto’s performance in 2024
-WITH ColapintoPerformance AS (
-    SELECT ra.round AS Round, r.positionOrder AS FinishingPosition, r.points AS PointsEarned
-    FROM results r
-    JOIN drivers d ON d.driverId = r.driverId
-    JOIN races ra ON ra.raceId = r.raceId
-    WHERE d.surname = 'Colapinto' AND ra.year = 2024
-)
-SELECT * FROM ColapintoPerformance ORDER BY Round;
-```
-*Why?* This analysis provides a detailed view of Colapinto’s progress during his debut season.
+These insights help provide a clearer view of Argentina’s history in Formula 1 and Franco Colapinto’s early career performance.
 
 ---
 
@@ -168,10 +102,10 @@ To showcase the insights obtained from the SQL analysis, I created an **interact
 ---
 
 ## 💬 **Contact & Links**  
-- **GitHub:**  https://github.com/MatiasR95 
-- **LinkedIn:** www.linkedin.com/in/matias-rossi-95-data-strength  
-- **Portfolio Blog:** https://matirossi87mr.wixsite.com/matiasrossi-porfolio
-- **Dataset:** [Kaggle F1 Dataset (1950–2024)] https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020  
+- **GitHub:** [[yourusername](https://github.com/yourusername)](https://github.com/MatiasR95)  
+- **LinkedIn:**  www.linkedin.com/in/matias-rossi-95-data-strength 
+- **Portfolio Blog:**  https://matirossi87mr.wixsite.com/matiasrossi-porfolio
+- **Dataset:** [Kaggle F1 Dataset (1950–2024)] (https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020))*  
 - **Tableau Dashboard:** *(Link coming soon)*  
 
 📧 *Let’s connect and discuss data, F1, or this project further!* 🚀
