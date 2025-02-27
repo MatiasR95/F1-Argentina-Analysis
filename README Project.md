@@ -48,19 +48,29 @@ For the analysis, I used a **comprehensive Formula 1 dataset** sourced from Kagg
 - **Total F1 Seasons:** 75 (1950–2024).  
 - **Season with the Most Races:** 2024 (24 races).  
 - **Most Frequent F1 Circuit:** *Autodromo Nazionale Monza* (most races hosted).  
-- **Number of Unique Circuits in F1 History:** *(Insert actual number after query execution)*.  
-- **Most Successful Constructor (by Championships):** Ferrari.  
-- **Season with the Highest Participation of Drivers:** *(Insert season year after query execution)*.  
+- **Which circuits have hosted the most races?:**
+  *Autodromo Nazionale di Monza,	Monza,	Italy
+  Circuit de Monaco,	Monte-Carlo,	Monaco
+  Silverstone Circuit,	Silverstone,	UK
+  Circuit de Spa-Francorchamps,	Spa	, Belgium
+  Circuit Gilles Villeneuve,	Montreal,	Canada*.  
+- **Most Successful Constructor (by Championships):** Ferrari.
+- **Drivers with most wins:**
+125	Hamilton
+121	Schumacher
+79	Prost
+78	Verstappen
+63	Vettel
 
 ### 🇦🇷 **Argentine & Franco Colapinto Insights**  
 - **Number of Argentine Drivers in F1 History:** 25.  
-- **Total Number of Argentine Grand Prix Held:** 20.  
+- **Total Number of Argentine Grand Prix Held:** 20. Autódromo Juan y Oscar Gálvez
 - **Most Successful Argentine Driver:** Juan Manuel Fangio (5 World Championships).  
 - **Best Constructor with Argentine Drivers:** Ferrari (most points scored with Argentine drivers).  
-- **Total Races Competed by Argentine Drivers:** *(Insert actual number after query execution)*.  
-- **Podium Finishes by Argentine Drivers:** *(Insert actual count after query execution)*.  
-- **Franco Colapinto’s Total Points in 2024:** *(Insert actual number after query execution)*.  
-- **Best Race Finish for Franco Colapinto in 2024:** *(Insert best position after query execution)*.  
+- **Total Races Competed by Argentine Drivers:** *373*.  
+- **Podium Finishes by Argentine Drivers:** *98*.  
+- **Franco Colapinto’s Total Points in 2024:** *5*.  
+- **Best Race Finish for Franco Colapinto in 2024:** *Round 17, 8 points*.  
 
 These insights help provide a clearer view of Argentina’s history in Formula 1 and Franco Colapinto’s early career performance.
 
